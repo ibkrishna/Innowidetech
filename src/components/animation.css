@@ -1,0 +1,95 @@
+/* animations.css */
+@keyframes flipIn {
+  from {
+    transform: rotateY(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+.flip-in {
+  animation: flipIn 0.2s forwards;
+}
+
+.flip-out {
+  animation: flipOut 0.2s forwards;
+}
+
+
+/* styles.css or your custom CSS file */
+@keyframes shrinkExpand {
+0%, 100% {
+  transform: scaleX(0);
+}
+50% {
+  transform: scaleX(1);
+}
+}
+
+.shrink-expand {
+animation: shrinkExpand 6s ease-in-out infinite;
+transform-origin: left;
+}
+
+
+
+/* animation for h1 and p*/
+
+@keyframes slideInLeft {
+from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+/* Define keyframes for the p tag animation */
+@keyframes slideInRight {
+from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+/* Apply the animation to the h1 tag */
+.animate-slide-in-left {
+animation: slideInLeft 1s ease-out;
+}
+
+/* Apply the animation to the p tag */
+.animate-slide-in-right {
+animation: slideInRight 1s ease-out;
+}
+
+
+/* Hide the previous and next buttons (arrows) */
+.carousel-control-prev,
+.carousel-control-next {
+display: none !important;
+}
+
+/* Hide the indicators (dots) */
+.carousel-indicators {
+display: none !important;
+}
